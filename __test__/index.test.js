@@ -11,11 +11,11 @@ describe('#arithmetic.js TDD testing for math functions', () => {
     const testArr = [];
     let counter = 0;
     while (counter < 3) {
-        testArr.push(faker.random.number({min:0, max:50}));
+        testArr.push(faker.random.number({min: 0, max: 50}));
         counter++;
     }
 
-    let testErr  = arithmetic.sum([1, 2, 'a', null]);
+    let testErr = arithmetic.sum([1, 2, 'a', null]);
 
     test('Testing returns error', () => {
         expect(testErr).toBe(undefined);
@@ -29,7 +29,7 @@ describe('#arithmetic.js TDD testing for math functions', () => {
     });
 
     //Subtraction portion
-    testErr  = arithmetic.subtract([1, 2, 'a', null]);
+    testErr = arithmetic.subtract([1, 2, 'a', null]);
 
     test('Testing returns error', () => {
         expect(testErr).toBe(undefined);
@@ -37,15 +37,41 @@ describe('#arithmetic.js TDD testing for math functions', () => {
 
     let arrMinus = arithmetic.subtract(testArr);
 
-    test('Testing returns sum result', () => {
+    test('Testing returns subtraction result', () => {
 
-        expect(arrMinus).toEqual(testArr[0] + testArr[1] + testArr[2]);
+        expect(arrMinus).toEqual(testArr[0] - testArr[1] - testArr[2]);
     });
 
+
+    //Multiplication portion
+    testErr = arithmetic.multiply([1, 2, 'a', null]);
+
+    test('Testing returns error', () => {
+        expect(testErr).toBe(undefined);
+    });
+
+    let arrTimes = arithmetic.multiply(testArr);
+
+    test('Testing returns multiply result', () => {
+
+        expect(arrTimes).toEqual(testArr[0] * testArr[1] * testArr[2]);
+    });
+
+
+    //Division portion
+    testErr = arithmetic.divide([1, 2, 'a', null]);
+
+    test('Testing returns error', () => {
+        expect(testErr).toBe(undefined);
+    });
+
+    let arrDivide = arithmetic.divide(testArr);
+
+    test('Testing returns divide result', () => {
+
+        expect(arrDivide).toEqual(testArr[0] / testArr[1] / testArr[2]);
+    });
 });
-
-
-
 
 
 describe('#greet.js TDD testing for greet function',() => {
