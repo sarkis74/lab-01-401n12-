@@ -89,4 +89,3 @@ describe('#greet.js TDD testing for greet function',() => {
     })
 });
 
-//Testing Travis CI
