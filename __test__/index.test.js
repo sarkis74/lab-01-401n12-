@@ -85,8 +85,7 @@ describe('#greet.js TDD testing for greet function',() => {
 
     });
     test('Returns hello world', () => {
-        expect(greet.greeting('world')).toEqual('hello world');//Needs to return string
+        expect(greet.greeting('world')).toEqual('hello world');
     })
 });
 
-//Testing Travis CI
