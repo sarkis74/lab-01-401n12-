@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1549688351162" clover="3.2.0">
-  <project timestamp="1549688351163" name="All files">
+<coverage generated="1549690260183" clover="3.2.0">
+  <project timestamp="1549690260184" name="All files">
     <metrics statements="36" coveredstatements="31" conditionals="20" coveredconditionals="15" methods="11" coveredmethods="11" elements="67" coveredelements="57" complexity="0" loc="36" ncloc="36" packages="1" files="2" classes="2"/>
     <file name="arithmetic.js" path="C:\Users\Sarkis\codefellows\401n12\seattle-javascript-401n12-\lib\arithmetic.js">
       <metrics statements="32" coveredstatements="27" conditionals="18" coveredconditionals="13" methods="10" coveredmethods="10"/>
