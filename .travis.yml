@@ -1,4 +1,12 @@
-language: node_js
-node_js:
-  - "node"
+
+{
+  "os": "linux",
+  "dist": "trusty",
+  "group": "stable",
+  ".result": "configured",
+  "node_js": [
+    "node"
+  ],
+  "language": "node_js"
+}
 
