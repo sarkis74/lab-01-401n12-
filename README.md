@@ -27,8 +27,11 @@
 **Exported Values and Methods**
 
 `add(...numbers) -> number`
+
 `subtract(...numbers) -> number`
+
 `multiply(...numbers) -> number`
+
 `divide(...numbers) -> number`
 
 **TESTS**
