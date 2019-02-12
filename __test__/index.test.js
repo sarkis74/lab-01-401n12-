@@ -6,6 +6,15 @@ const faker = require('faker');
 
 
 describe('#arithmetic.js TDD testing for math functions', () => {
+    beforeAll(() => {
+        console.log('Initialized all tests');
+    });
+
+    afterAll(() => {
+        console.log('Completed all tests');
+    });
+
+
     //Sarkis - Here will go arithmetic tests
     //Addition portion
     const testArr = [];
@@ -15,7 +24,7 @@ describe('#arithmetic.js TDD testing for math functions', () => {
         counter++;
     }
 
-    let testErr = arithmetic.sum([1, 2, 'a', null]);
+    let testErr = arithmetic.calc([1, 2, 'a', null], arithmetic.sum);
 
     test('Testing returns error', () => {
         expect(testErr).toBe(undefined);
@@ -29,7 +38,7 @@ describe('#arithmetic.js TDD testing for math functions', () => {
     });
 
     //Subtraction portion
-    testErr = arithmetic.subtract([1, 2, 'a', null]);
+    testErr = arithmetic.calc([1, 2, 'a', null], arithmetic.subtract);
 
     test('Testing returns error', () => {
         expect(testErr).toBe(undefined);
@@ -44,7 +53,7 @@ describe('#arithmetic.js TDD testing for math functions', () => {
 
 
     //Multiplication portion
-    testErr = arithmetic.multiply([1, 2, 'a', null]);
+    testErr = arithmetic.calc([1, 2, 'a', null], arithmetic.multiply);
 
     test('Testing returns error', () => {
         expect(testErr).toBe(undefined);
@@ -59,7 +68,7 @@ describe('#arithmetic.js TDD testing for math functions', () => {
 
 
     //Division portion
-    testErr = arithmetic.divide([1, 2, 'a', null]);
+    testErr = arithmetic.calc([1, 2, 'a', null], arithmetic.divide);
 
     test('Testing returns error', () => {
         expect(testErr).toBe(undefined);
@@ -70,6 +79,12 @@ describe('#arithmetic.js TDD testing for math functions', () => {
     test('Testing returns divide result', () => {
 
         expect(arrDivide).toEqual(testArr[0] / testArr[1] / testArr[2]);
+    });
+    //Test for null responses
+    const testNull = () => {return null;}
+    test('Testing null', () => {
+        expect(testNull()).toBeNull();
+
     });
 });
 
